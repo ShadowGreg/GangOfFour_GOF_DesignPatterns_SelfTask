@@ -1,9 +1,8 @@
 ﻿using System.Text;
-using Creational_FactoryMethod.Core;
+using Creational_FactoryMethod_task1._1.Core;
 using Newtonsoft.Json;
 
-namespace Creational_FactoryMethod.Controller;
-
+namespace Creational_FactoryMethod_task1._1.DataBase;
 public class DataInMemory {
     public static List<BaseDoc> DocsList = new() {
         new BaseDoc() {

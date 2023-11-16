@@ -1,4 +1,4 @@
-﻿namespace Creational_FactoryMethod.Core;
+﻿namespace Creational_FactoryMethod_task1._1.Core;
 
 public class Disposal : BaseData {
     public string? Employee { get; set; }

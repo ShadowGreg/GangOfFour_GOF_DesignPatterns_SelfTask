@@ -1,7 +1,8 @@
-﻿using Creational_FactoryMethod.Controller;
+﻿
+using Creational_FactoryMethod_task1._1.Controller;
+using Creational_FactoryMethod_task1._1.DataBase;
 
-namespace Creational_FactoryMethod.View;
-
+namespace Creational_FactoryMethod_task1._1.View;
 public class ViewController {
     static PreviewController _previewController = new PreviewController(new DataBaseOperation());
 

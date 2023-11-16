@@ -1,9 +1,9 @@
 ﻿using System.Text;
-using Creational_FactoryMethod.Core;
+using Creational_FactoryMethod_task1._1.Core;
+using Creational_FactoryMethod_task1._1.DataBase;
 using Newtonsoft.Json;
 
-namespace Creational_FactoryMethod.Controller;
-
+namespace Creational_FactoryMethod_task1._1.Controller; 
 public class PreviewController {
     private static IDataBaseConnection _connection;
 
@@ -13,8 +13,9 @@ public class PreviewController {
 
     public string GetAllData() {
         StringBuilder allDocsTable = new StringBuilder();
-        foreach (var doc in _connection.GetAllData()) {
-            allDocsTable.AppendLine(doc.ToString() + "\n");
+        var connection = _connection.GetAllData();
+        foreach (var doc in connection) {
+            allDocsTable.AppendLine(doc + "\n");
         }
 
         return allDocsTable.ToString();
@@ -26,7 +27,10 @@ public class PreviewController {
     }
 
     public string GetDocument(string json) {
-        BaseDoc baseDoc = JsonConvert.DeserializeObject<BaseDoc>(json);
+        string[] jsonParts = json.Split(new[] { "}{", }, StringSplitOptions.None);
+        string part1 = jsonParts[0] + "}";
+        string part2 = "{" + jsonParts[1];
+        var baseDoc = JsonConvert.DeserializeObject<BaseDoc>(part1);
         Type classType = null;
         BaseDocType docType = baseDoc.DocType;
 
@@ -44,7 +48,7 @@ public class PreviewController {
 
         dynamic dynamicObj = null;
         if (classType != null) {
-            dynamicObj = JsonConvert.DeserializeObject(json, classType) ?? "No such type";
+            dynamicObj = JsonConvert.DeserializeObject(part2, classType) ?? "No such type";
         }
 
         var output = new StringBuilder();
