@@ -1,0 +1,1 @@
+﻿https://design1pattern.wordpress.com/lab/n1/
