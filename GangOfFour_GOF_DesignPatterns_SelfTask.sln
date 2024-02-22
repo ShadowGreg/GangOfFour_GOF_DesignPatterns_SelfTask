@@ -8,6 +8,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "TestProject\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Creational_FactoryMethod_task1.2", "Creational_FactoryMethod_task1.2\Creational_FactoryMethod_task1.2.csproj", "{AEE55B73-9785-405E-AF33-68EBED99BDFF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "structural pattern", "structural pattern", "{1051FF5F-A1B6-49EC-8D0C-37A093D2F38C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decorator.task1", "Decorator.task1\Decorator.task1.csproj", "{035EBD5F-1E20-49F1-92B9-4FAF048D8D49}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +34,12 @@ Global
 		{AEE55B73-9785-405E-AF33-68EBED99BDFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEE55B73-9785-405E-AF33-68EBED99BDFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEE55B73-9785-405E-AF33-68EBED99BDFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{035EBD5F-1E20-49F1-92B9-4FAF048D8D49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{035EBD5F-1E20-49F1-92B9-4FAF048D8D49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{035EBD5F-1E20-49F1-92B9-4FAF048D8D49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{035EBD5F-1E20-49F1-92B9-4FAF048D8D49}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{035EBD5F-1E20-49F1-92B9-4FAF048D8D49} = {1051FF5F-A1B6-49EC-8D0C-37A093D2F38C}
 	EndGlobalSection
 EndGlobal
